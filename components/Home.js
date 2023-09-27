@@ -17,7 +17,7 @@ function Home() {
       .then(data => {
         const newMovies = data.movies.map(data => {
           const poster = `https://image.tmdb.org/t/p/w500/${data.poster_path}`; 
-          const overview = data.overview.slice(250)   
+          const overview = data.overview.slice(0, 250)   
           return { 
             title: data.title, 
             poster, 
